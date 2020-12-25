@@ -1,0 +1,251 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loan Prediction</title>
+
+
+    <!-- BootStrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+
+    <!-- css -->
+    <link rel="stylesheet" href="static/css/styles.css">
+
+
+</head>
+
+<body>
+
+    <!-- As a heading -->
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="/">Loan Prediction</a>
+            </div>
+        </div>
+    </nav>
+
+    <br><br><br>
+
+
+    <div class="container">
+
+
+
+        <form action="\predict" method="post">
+
+
+            <div class="row">
+                <div class="col-sm-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Gender</h5>
+                            <!-- Gender -->
+                            <select name="Gender" id="Gender" required="required">
+                                <option value="1">Male</option>
+                                <option value="0">Female</option>
+                            </select>       
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <br>
+                <br>
+                <div class="col-sm-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Married?</h5>
+                            <!-- Married -->
+                            <select name="Married" id="Married" required="required">
+                                <option value="1">Yes</option>
+                                <option value="0">No</option>
+                            </select> 
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <br>
+            <br>
+            <br>
+
+            <div class="row">
+                <div class="col-sm-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <!-- Dependents -->
+                            <h5 class="card-title">Dependents</h5>
+                            <select name="Dependents" id="Dependents" required="required">
+                                <option value="0">0</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3+</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Education</h5>
+                            <!-- Education -->
+                            <select name="Education" id="Education" required="required">
+                                <option value="0">Graduate</option>
+                                <option value="1">Non-Graduate</option>
+                             </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <br>
+            <br>
+            <br>
+
+            <div class="row">
+                <div class="col-sm-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Self Employed</h5>
+                            <!-- Self_Employed -->
+                            <select name="Self_Employed" id = "Self_Employed" required = "required">
+                                <option value="1">No</option>
+                                <option value="2">Yes</option>
+                              </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Applicant Income</h5>
+                            <!-- ApplicantIncome -->
+                            <input name="ApplicantIncome" id="ApplicantIncome" required="required">
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <br>
+            <br>
+
+            <div class="row">
+                <div class="col-sm-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Co Applicant Income</h5>
+                            <!-- CoapplicantIncome -->
+                            <input name="CoapplicantIncome" id = "CoapplicantIncome">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Loan Amount</h5>
+                            <!-- LoanAmount -->
+                            <input name="LoanAmount" id="LoanAmount" required="required">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <br>
+            <br>
+            <br>
+            <div class="row">
+                <div class="col-sm-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Credit History</h5>
+                            <!-- Credit_History -->
+                            <select name="Credit_History" id="Credit_History" required="Credit_History">
+                                <option value="1">1</option>
+                                <option value="0">0</option>
+                            </select>>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Loan Amount Term</h5>
+                            <!-- Loan_Amount_Term -->
+                            <select name="Loan_Amount_Term" id = "Loan_Amount_Term">
+                                <option value="360.0">360</option>
+                                <option value="300.0">300</option>
+                                <option value="180.0">180</option>
+                                <option value="84.0">84</option>
+                                <option value="480.0">480</option>
+                                <option value="240.0">240</option>
+                                <option value="120.0">120</option>
+                                <option value="36.0">36</option>
+                                <option value="12.0">12</option>
+                                <option value="60.0">60</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <br>
+            <br>
+            <br>
+
+            <div class="col-sm-6">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Property Area</h5>
+                        <!-- Property_Area -->
+                        <select name="Property_Area" id = "Property_Area">
+                            <option value="0">Rural</option>
+                            <option value="0">Semiurban</option>
+                            <option value="0">Urban</option>
+                      </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <br>
+        <br>
+        <br>
+            <!-- Submit -->
+            <input type="submit" value="Submit" class="btn btn-secondary">
+        </form>
+
+        <br>
+        <br>
+        <h3>{{ prediction_text }}</h3>
+
+        <br>
+        <br>
+     
+
+    </div>
+
+
+
+
+    <!-- JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>
+
+<!--For the front end code all credit goes to https://github.com/Mandal-21/Flight-Price-Prediction.git-->>
